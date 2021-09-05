@@ -20,6 +20,25 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.acc_name,"Facebook")
         self.assertEqual(self.new_credential.acc_password,"123456")
 
+    def test_save_credential(self):
+        """
+        Test to confirm credentials are being saved
+        """        
+
+    def test_save_multiple_credentials(self):
+        """
+        Test to confirm multiple credentials can be saved
+        """
+    def test_delete_credential(self):
+        """
+        Test delete of a credential
+        """     
+    def display_credentials(self):
+        """
+        Test to confirm all credentials rea being returned
+        """
+
+
 
 
 if __name__=='__main__':

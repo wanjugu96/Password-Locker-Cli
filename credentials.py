@@ -25,7 +25,7 @@ class Credentials:
         """
         Method to delete credentials
         """
-        Credentials.credentials_list(self)
+        Credentials.credentials_list.remove(self)
     def generate_password():
         
         lower=string.ascii_lowercase
