@@ -1,12 +1,10 @@
 from logging import StringTemplateStyle
 import random
 import string
+#from user import User
 
-class Credentials:
-    #save credential
-    #deletecredential
-    #display credentials
-    #genearate rand pass
+class Credentials(): 
+
     credentials_list=[]
     """
     Class generates various accounts with passwords
