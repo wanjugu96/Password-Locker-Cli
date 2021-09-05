@@ -9,9 +9,10 @@ class Credentials():
     """
     Class generates various accounts with passwords
     """
-    def __init__(self,acc_name,acc_password):
+    def __init__(self,acc_name,acc_username,acc_password):
         self.acc_name=acc_name
         self.acc_password=acc_password
+        self.acc_username=acc_username
     
     def save_credential(self):
         """
