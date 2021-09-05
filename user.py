@@ -26,5 +26,10 @@ class User:
         if self.password==password:
             return True
 
+    @classmethod
+    def display_user_list(cls):
+        return cls.user_list
+        
+
 
    
