@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from credentials import Credentials
 class TestUser(unittest.TestCase):
     """
     Test class that defines test cases for our contact class behaviours
