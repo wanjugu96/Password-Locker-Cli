@@ -58,7 +58,8 @@ class TestCredentials(unittest.TestCase):
         """
         Test to confirm all credentials rea being returned
         """
-        pass
+        self.assertEqual(Credentials.display_credential_list(), Credentials.credentials_list)
+        
 
 
 
