@@ -1,5 +1,4 @@
-#create a password locker 
-#with my details, a login username and password
+
 from credentials import Credentials
 class User:
     user_list=[]

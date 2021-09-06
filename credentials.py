@@ -1,7 +1,5 @@
-from logging import StringTemplateStyle
 import random
 import string
-#from user import User
 
 class Credentials(): 
 

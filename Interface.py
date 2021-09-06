@@ -80,10 +80,10 @@ def main():
         print('\n')
         print("*************************************************************************************************************************************************************")
 
-        print(' Enter username:')
+        print(' Enter Login username:')
         login_name=input()
         print('\n')
-        print(' Enter password:')
+        print(' Enter login password:')
         print('\n')
         login_password=input()
         print('\n')
@@ -139,13 +139,16 @@ def main():
 
                         user.credential_list=display_credentials()
                         for credential in user.credential_list:
+                            print('\n')
+
 
                             print(f" -  {credential.acc_name} credentials are: Username is {credential.acc_username} password is:{credential.acc_password}")
+                            print('\n')
                             
-                            print("____________________________________________________________________________________________________________________________________________")
+                            print("_________________________________________________________________________________________________________________________________________________________")
 
 
-                            print("_____________________________________________________________________________________________________________________________________________")
+                            
                     else:
                         print('\n')
 
@@ -231,63 +234,7 @@ def main():
 
             continue
             
-                 
 
-
-
-        # for user in display_users():
-        # print(f"user added name is {user.username}")
-
-            
-        #while True:
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-    print("============================================================Random tests==========================================================")
-
-    print("============================================================Random tests===============================================================")
-    twitter=create_credential("Twitter","123")
-    print(twitter.acc_name)
-    insta=create_credential("Insta","4567")
-    Fb=create_credential("fb","1234")
-
-    twitter.save_credential()
-    insta.save_credential()
-    allcreds=display_credentials()
-
-    #print(display_credentials())
-    
-    delete_credential(twitter)
-    
-    allcredss=[]
-    shelly=create_user("Shelly","1234",allcreds)
-
-    allcredss=shelly.credential_list
-
-    print(shelly.username)
-
-    shelly.credential_list=display_credentials()
-
-    for credential in shelly.credential_list:
-        print(f"name is:{credential.acc_name} pass is:{credential.acc_password}")
-
-        
-
-
-
-    instapass=generate_password()
-    print(f'My insta pass is{instapass}')
 
 if __name__ == '__main__':
     main()
