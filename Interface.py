@@ -75,6 +75,7 @@ def main():
     print(" Account created Successfully ")
     print('\n')
     while True:
+
         print(" login to your account below:")
         print('\n')
         print("*************************************************************************************************************************************************************")
@@ -103,6 +104,7 @@ def main():
                 print("  view -  To view saved account credentials") 
                 print("  new -   To save new accounts credentials")
                 print("  delete -To delete a saved credential")
+                print("  ex -    To log out from  application")
                 print('\n')
                 print("*************************************************************************************************************************************************************")
 
@@ -140,10 +142,10 @@ def main():
 
                             print(f" -  {credential.acc_name} credentials are: Username is {credential.acc_username} password is:{credential.acc_password}")
                             
-                            print("__________________________________________________________________________________________________________________________________________________________________")
+                            print("____________________________________________________________________________________________________________________________________________")
 
 
-                            print("______-----------__________________________________________________________________________________________________________________________________________________")
+                            print("_____________________________________________________________________________________________________________________________________________")
                     else:
                         print('\n')
 
@@ -212,7 +214,12 @@ def main():
                             print(f"successfully deleted {credential.acc_name} account credentials")
                             print('\n')
                             
-                    
+                elif option=='ex':
+                    print('\n')
+                    print(f"Bye bye {login_name}. Hope to see you again")
+                    print('\n')
+
+                    break
 
 
                 else:
@@ -223,6 +230,9 @@ def main():
             print("Wrong password please try again!")
 
             continue
+            
+                 
+
 
 
         # for user in display_users():
