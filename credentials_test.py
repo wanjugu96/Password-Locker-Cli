@@ -1,7 +1,9 @@
+from Interface import save_credential
 from credentials import Credentials
 import unittest
 
 class TestCredentials(unittest.TestCase):
+    Credentials.credentials_list=[]
     """
     Test calss that defines test cases for our credentials class behaviours
     unnittest.TetsCase:Testcase class that helps crete testcases
@@ -24,6 +26,8 @@ class TestCredentials(unittest.TestCase):
         """
         Test to confirm credentials are being saved
         """        
+        self.new_credential.save_credential()
+        self.assertEqual(Credentials.)
 
     def test_save_multiple_credentials(self):
         """
