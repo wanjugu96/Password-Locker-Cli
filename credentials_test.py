@@ -1,4 +1,4 @@
-from Interface import save_credential
+from Interface import delete_credential
 from credentials import Credentials
 import unittest
 
@@ -12,7 +12,7 @@ class TestCredentials(unittest.TestCase):
         """
         Setup method to run before each testcase
         """
-        self.new_credential=Credentials("Facebook","123456")
+        self.new_credential=Credentials("Facebook","mary","123456")
 
     def test_init(self):
         """
@@ -27,20 +27,38 @@ class TestCredentials(unittest.TestCase):
         Test to confirm credentials are being saved
         """        
         self.new_credential.save_credential()
-        self.assertEqual(Credentials.)
+        self.assertEqual(len(Credentials.credentials_list),1)
 
     def test_save_multiple_credentials(self):
         """
         Test to confirm multiple credentials can be saved
         """
+        self.test_credential=Credentials("Facewsok","doe","123456")
+        self.test_credential.save_credential()
+        self.new_credential.save_credential()
+        self.assertEqual(len(Credentials.credentials_list),2)
+    
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+       '''
+        Credentials.credentials_list= []
+
     def test_delete_credential(self):
         """
         Test delete of a credential
         """     
+        self.test_credential=Credentials("Facewsok","doe","123456")
+        self.test_credential.save_credential()
+        self.test_credential.delete_credentials()
+        
+        self.assertEqual(len(Credentials.credentials_list),0)
+        
     def display_credentials(self):
         """
         Test to confirm all credentials rea being returned
         """
+        pass
 
 
 
